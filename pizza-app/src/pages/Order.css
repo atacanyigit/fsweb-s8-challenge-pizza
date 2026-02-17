@@ -1,0 +1,241 @@
+.order-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+
+.order-page :focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+.order-form label,
+.label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.order-form input,
+.order-form textarea,
+.order-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Hata mesajları */
+.error {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+
+.submit-btn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #ff3c3c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.order-header {
+  padding: 16px 0;
+}
+
+.order-header-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Pizza info */
+.pizza-info {
+  padding: 8px 0 20px;
+}
+
+.pizza-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.pizza-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.pizza-price {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.muted {
+  opacity: 0.7;
+}
+
+.hint {
+  margin: 6px 0 0;
+}
+
+/* Grid: form + summary */
+.order-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+  align-items: start;
+}
+
+/* Kart görünümü */
+.form-card,
+.summary-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+}
+
+/* 2 kolonluk üst satır */
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Field aralıkları */
+.field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.req {
+  color: #d11;
+}
+
+/* Select daha düzgün */
+.select {
+  background: #fff;
+}
+
+/* Radio column */
+.radio-col {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+/* Checkbox grid */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+
+.count-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.count-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.count {
+  min-width: 44px;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+.summary-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #f1f1f1;
+}
+
+.summary-row.total {
+  font-weight: 800;
+}
+
+
+@media (max-width: 900px) {
+  .order-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
